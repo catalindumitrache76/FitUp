@@ -31,15 +31,21 @@ Partial Class MainScreen
         Me.TabControl2 = New System.Windows.Forms.TabControl()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.TabControl3 = New System.Windows.Forms.TabControl()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.TabPage7 = New System.Windows.Forms.TabPage()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer2.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel2.SuspendLayout()
         Me.SplitContainer2.SuspendLayout()
         Me.TabControl2.SuspendLayout()
+        Me.TabControl3.SuspendLayout()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -77,10 +83,10 @@ Partial Class MainScreen
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.Aquamarine
-        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 31)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(385, 632)
+        Me.TabPage1.Size = New System.Drawing.Size(414, 686)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Meals of the day"
         '
@@ -103,7 +109,8 @@ Partial Class MainScreen
         '
         'SplitContainer2.Panel1
         '
-        Me.SplitContainer2.Panel1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.SplitContainer2.Panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.SplitContainer2.Panel1.Controls.Add(Me.TabControl3)
         '
         'SplitContainer2.Panel2
         '
@@ -145,6 +152,48 @@ Partial Class MainScreen
         Me.TabPage4.TabIndex = 1
         Me.TabPage4.Text = "Exercises of the week"
         '
+        'TabControl3
+        '
+        Me.TabControl3.Controls.Add(Me.TabPage5)
+        Me.TabControl3.Controls.Add(Me.TabPage6)
+        Me.TabControl3.Controls.Add(Me.TabPage7)
+        Me.TabControl3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl3.Font = New System.Drawing.Font("Rockwell", 10.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabControl3.Location = New System.Drawing.Point(0, 0)
+        Me.TabControl3.Name = "TabControl3"
+        Me.TabControl3.SelectedIndex = 0
+        Me.TabControl3.Size = New System.Drawing.Size(392, 721)
+        Me.TabControl3.TabIndex = 0
+        '
+        'TabPage5
+        '
+        Me.TabPage5.BackColor = System.Drawing.Color.Goldenrod
+        Me.TabPage5.Location = New System.Drawing.Point(4, 31)
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage5.Size = New System.Drawing.Size(384, 686)
+        Me.TabPage5.TabIndex = 0
+        Me.TabPage5.Text = "Calendar"
+        '
+        'TabPage6
+        '
+        Me.TabPage6.BackColor = System.Drawing.Color.DarkGoldenrod
+        Me.TabPage6.Location = New System.Drawing.Point(4, 31)
+        Me.TabPage6.Name = "TabPage6"
+        Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage6.Size = New System.Drawing.Size(384, 686)
+        Me.TabPage6.TabIndex = 1
+        Me.TabPage6.Text = "My meals"
+        '
+        'TabPage7
+        '
+        Me.TabPage7.BackColor = System.Drawing.Color.Gold
+        Me.TabPage7.Location = New System.Drawing.Point(4, 31)
+        Me.TabPage7.Name = "TabPage7"
+        Me.TabPage7.Size = New System.Drawing.Size(384, 686)
+        Me.TabPage7.TabIndex = 2
+        Me.TabPage7.Text = "My exercises"
+        '
         'MainScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -164,10 +213,12 @@ Partial Class MainScreen
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)
+        Me.SplitContainer2.Panel1.ResumeLayout(False)
         Me.SplitContainer2.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer2.ResumeLayout(False)
         Me.TabControl2.ResumeLayout(False)
+        Me.TabControl3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -180,4 +231,8 @@ Partial Class MainScreen
     Friend WithEvents TabControl2 As TabControl
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents TabControl3 As TabControl
+    Friend WithEvents TabPage5 As TabPage
+    Friend WithEvents TabPage6 As TabPage
+    Friend WithEvents TabPage7 As TabPage
 End Class
