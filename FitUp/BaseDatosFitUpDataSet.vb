@@ -1,4 +1,12 @@
 ﻿Partial Class BaseDatosFitUpDataSet
+    Partial Public Class DayAdapterDataTable
+        Private Sub DayAdapterDataTable_ColumnChanging(sender As Object, e As DataColumnChangeEventArgs) Handles Me.ColumnChanging
+
+
+        End Sub
+
+    End Class
+
     Partial Public Class ExerciseDataTable
         Private Sub ExerciseDataTable_ColumnChanging(sender As Object, e As DataColumnChangeEventArgs) Handles Me.ColumnChanging
 
