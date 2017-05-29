@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainScreen
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MainScreen
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainScreen))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
@@ -48,6 +48,8 @@ Partial Class MainScreen
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.BaseDatosFitUpDataSet1 = New FitUp.BaseDatosFitUpDataSet()
+        Me.SplitContainer4 = New System.Windows.Forms.SplitContainer()
+        Me.AddAnExerciseButton = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -65,8 +67,12 @@ Partial Class MainScreen
         CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer3.Panel1.SuspendLayout()
         Me.SplitContainer3.SuspendLayout()
+        Me.TabPage7.SuspendLayout()
         Me.TabControl2.SuspendLayout()
         CType(Me.BaseDatosFitUpDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SplitContainer4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer4.Panel1.SuspendLayout()
+        Me.SplitContainer4.SuspendLayout()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -103,7 +109,7 @@ Partial Class MainScreen
         '
         'TabPage1
         '
-        Me.TabPage1.BackColor = System.Drawing.Color.MediumTurquoise
+        Me.TabPage1.BackColor = System.Drawing.Color.Azure
         Me.TabPage1.Controls.Add(Me.TableLayoutPanel1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 31)
         Me.TabPage1.Name = "TabPage1"
@@ -197,7 +203,7 @@ Partial Class MainScreen
         '
         'TabPage2
         '
-        Me.TabPage2.BackColor = System.Drawing.Color.MediumTurquoise
+        Me.TabPage2.BackColor = System.Drawing.Color.Azure
         Me.TabPage2.Location = New System.Drawing.Point(4, 31)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -240,7 +246,7 @@ Partial Class MainScreen
         '
         'TabPage5
         '
-        Me.TabPage5.BackColor = System.Drawing.Color.MediumTurquoise
+        Me.TabPage5.BackColor = System.Drawing.Color.Azure
         Me.TabPage5.Controls.Add(Me.Label2)
         Me.TabPage5.Controls.Add(Me.Label1)
         Me.TabPage5.Controls.Add(Me.DateTimePicker1)
@@ -282,7 +288,7 @@ Partial Class MainScreen
         '
         'TabPage6
         '
-        Me.TabPage6.BackColor = System.Drawing.Color.MediumTurquoise
+        Me.TabPage6.BackColor = System.Drawing.Color.Azure
         Me.TabPage6.Controls.Add(Me.SplitContainer3)
         Me.TabPage6.Location = New System.Drawing.Point(4, 31)
         Me.TabPage6.Name = "TabPage6"
@@ -300,8 +306,12 @@ Partial Class MainScreen
         '
         'SplitContainer3.Panel1
         '
-        Me.SplitContainer3.Panel1.BackColor = System.Drawing.Color.MediumTurquoise
+        Me.SplitContainer3.Panel1.BackColor = System.Drawing.Color.Azure
         Me.SplitContainer3.Panel1.Controls.Add(Me.AddAMealButton)
+        '
+        'SplitContainer3.Panel2
+        '
+        Me.SplitContainer3.Panel2.BackColor = System.Drawing.Color.Azure
         Me.SplitContainer3.Size = New System.Drawing.Size(378, 680)
         Me.SplitContainer3.SplitterDistance = 37
         Me.SplitContainer3.TabIndex = 0
@@ -319,7 +329,8 @@ Partial Class MainScreen
         '
         'TabPage7
         '
-        Me.TabPage7.BackColor = System.Drawing.Color.MediumTurquoise
+        Me.TabPage7.BackColor = System.Drawing.Color.Azure
+        Me.TabPage7.Controls.Add(Me.SplitContainer4)
         Me.TabPage7.Location = New System.Drawing.Point(4, 31)
         Me.TabPage7.Name = "TabPage7"
         Me.TabPage7.Size = New System.Drawing.Size(384, 686)
@@ -340,7 +351,7 @@ Partial Class MainScreen
         '
         'TabPage3
         '
-        Me.TabPage3.BackColor = System.Drawing.Color.MediumTurquoise
+        Me.TabPage3.BackColor = System.Drawing.Color.Azure
         Me.TabPage3.Location = New System.Drawing.Point(4, 31)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
@@ -350,7 +361,7 @@ Partial Class MainScreen
         '
         'TabPage4
         '
-        Me.TabPage4.BackColor = System.Drawing.Color.MediumTurquoise
+        Me.TabPage4.BackColor = System.Drawing.Color.Azure
         Me.TabPage4.Location = New System.Drawing.Point(4, 31)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(10)
@@ -362,6 +373,31 @@ Partial Class MainScreen
         '
         Me.BaseDatosFitUpDataSet1.DataSetName = "BaseDatosFitUpDataSet"
         Me.BaseDatosFitUpDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'SplitContainer4
+        '
+        Me.SplitContainer4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer4.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer4.Name = "SplitContainer4"
+        Me.SplitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'SplitContainer4.Panel1
+        '
+        Me.SplitContainer4.Panel1.Controls.Add(Me.AddAnExerciseButton)
+        Me.SplitContainer4.Size = New System.Drawing.Size(384, 686)
+        Me.SplitContainer4.SplitterDistance = 40
+        Me.SplitContainer4.TabIndex = 0
+        '
+        'AddAnExerciseButton
+        '
+        Me.AddAnExerciseButton.Dock = System.Windows.Forms.DockStyle.Top
+        Me.AddAnExerciseButton.Font = New System.Drawing.Font("Rockwell", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AddAnExerciseButton.Location = New System.Drawing.Point(0, 0)
+        Me.AddAnExerciseButton.Name = "AddAnExerciseButton"
+        Me.AddAnExerciseButton.Size = New System.Drawing.Size(384, 34)
+        Me.AddAnExerciseButton.TabIndex = 0
+        Me.AddAnExerciseButton.Text = "Add an exercise"
+        Me.AddAnExerciseButton.UseVisualStyleBackColor = True
         '
         'MainScreen
         '
@@ -396,8 +432,12 @@ Partial Class MainScreen
         Me.SplitContainer3.Panel1.ResumeLayout(False)
         CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer3.ResumeLayout(False)
+        Me.TabPage7.ResumeLayout(False)
         Me.TabControl2.ResumeLayout(False)
         CType(Me.BaseDatosFitUpDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer4.Panel1.ResumeLayout(False)
+        CType(Me.SplitContainer4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer4.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -427,4 +467,6 @@ Partial Class MainScreen
     Friend WithEvents SplitContainer3 As SplitContainer
     Friend WithEvents AddAMealButton As Button
     Friend WithEvents BaseDatosFitUpDataSet1 As BaseDatosFitUpDataSet
+    Friend WithEvents SplitContainer4 As SplitContainer
+    Friend WithEvents AddAnExerciseButton As Button
 End Class
