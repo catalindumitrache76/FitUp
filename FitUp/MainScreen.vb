@@ -23,6 +23,7 @@ Public Class MainScreen
         standardMealButton = AddAMealButton
         standardExerciseButton = AddAnExerciseButton
 
+
     End Sub
 
 
