@@ -16,8 +16,8 @@ Public Class MainScreen
     Dim standardMealButton As New Button
     Dim standardExerciseButton As New Button
     Private Sub MainScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        SplitContainer3.SplitterDistance = AddAMealButton.Height
-        SplitContainer4.SplitterDistance = AddAnExerciseButton.Height
+        SplitContainer3.SplitterDistance = AddAMealButton.Height + 10
+        SplitContainer4.SplitterDistance = AddAnExerciseButton.Height + 10
         myConn = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\FitUp\FitUp\BaseDatosFitUp.mdf;Integrated Security=True;Connect Timeout=5")
         myConn.Open()
         standardMealButton = AddAMealButton
@@ -35,6 +35,7 @@ Public Class MainScreen
         Try
             SplitContainer1.SplitterDistance = myControl.Size.Width / 3
             SplitContainer2.SplitterDistance = myControl.Size.Width / 3
+
             ' For meals
             AddMealCategory.Width = (myControl.Size.Width / 3) - 10
             MealDescriptionTextbox.Width = (myControl.Size.Width / 3) - 10
@@ -88,7 +89,7 @@ Public Class MainScreen
         SplitContainer3.Panel1.Controls.Add(MealDescriptionTextbox)
         SplitContainer3.Panel1.Controls.Add(AddAMealDoneButton)
 
-        'Disables the AddAMealButton
+        'Disables the Add Button
         AddAMealButton.Enabled = False
 
         AddHandler AddAMealDoneButton.Click, AddressOf AddAMealDoneButton_Click
@@ -96,6 +97,30 @@ Public Class MainScreen
     End Sub
 
     Private Sub AddAnExerciseButton_Click(sender As Object, e As EventArgs) Handles AddAnExerciseButton.Click
+
+        'Adds an image for the exercise
+        MsgBox("First insert an image for the exercise. Allowed formats: .jpg, .jpeg and .png")
+
+        OpenFileDialog1.Title = "Please Select an image"
+        OpenFileDialog1.CheckFileExists = True
+        OpenFileDialog1.CheckPathExists = True
+        OpenFileDialog1.FileName = ""
+        OpenFileDialog1.InitialDirectory = My.Computer.FileSystem.CurrentDirectory
+
+        Dim fileDialog = OpenFileDialog1.ShowDialog()
+        Dim filePath = OpenFileDialog1.FileName
+
+        If fileDialog = DialogResult.OK Then
+
+            If filePath.EndsWith(".jpg") Or filePath.EndsWith(".jpeg") Or filePath.EndsWith(".png") Then
+                Dim photo = Image.FromFile(filePath)
+                Dim msg = MsgBox(filePath)
+            Else
+                MsgBox("Image format not supported. Available formats: .jpg, .jpeg and .png")
+            End If
+        End If
+
+
         'Expand the container 
         SplitContainer4.SplitterDistance = 170 + standardExerciseButton.Height
 
@@ -132,7 +157,7 @@ Public Class MainScreen
         SplitContainer4.Panel1.Controls.Add(ExerciseDescriptionTextbox)
         SplitContainer4.Panel1.Controls.Add(AddAnExerciseDoneButton)
 
-        'Disables the AddAnExerciseButton
+        'Disables the Add Button
         AddAnExerciseButton.Enabled = False
 
         AddHandler AddAnExerciseDoneButton.Click, AddressOf AddAnExerciseDoneButton_Click

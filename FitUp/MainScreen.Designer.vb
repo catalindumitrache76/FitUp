@@ -50,6 +50,7 @@ Partial Class MainScreen
         Me.BaseDatosFitUpDataSet1 = New FitUp.BaseDatosFitUpDataSet()
         Me.SplitContainer4 = New System.Windows.Forms.SplitContainer()
         Me.AddAnExerciseButton = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -399,6 +400,10 @@ Partial Class MainScreen
         Me.AddAnExerciseButton.Text = "Add an exercise"
         Me.AddAnExerciseButton.UseVisualStyleBackColor = True
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'MainScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -469,4 +474,5 @@ Partial Class MainScreen
     Friend WithEvents BaseDatosFitUpDataSet1 As BaseDatosFitUpDataSet
     Friend WithEvents SplitContainer4 As SplitContainer
     Friend WithEvents AddAnExerciseButton As Button
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class
